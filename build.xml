@@ -192,6 +192,7 @@
              destdir="${dist.dir}/javadoc"
              version="true"
              author="true"
+             link="/usr/share/javadoc/java"
              windowtitle="${Name}" />
   </target>
 
