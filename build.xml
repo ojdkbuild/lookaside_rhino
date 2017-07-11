@@ -171,6 +171,13 @@
     </copy>
   </target>
 
+  <target name="copy-manpage" depends="init">
+    <mkdir dir="${dist.dir}/man"/>
+    <copy todir="${dist.dir}/man">
+      <fileset dir="man"/>
+    </copy>
+  </target>
+
   <target name="copy-misc" depends="init">
     <filter token="datestamp" value="${TODAY}"/>
     <copy todir="${dist.dir}" filtering="yes">
@@ -182,7 +189,7 @@
     </copy>
   </target>
 
-  <target name="copy-all" depends="copy-source,copy-examples,copy-misc">
+  <target name="copy-all" depends="copy-source,copy-examples,copy-manpage,copy-misc">
   </target>
 
   <target name="javadoc" depends="init">
