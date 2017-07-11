@@ -42,7 +42,7 @@ public class WrapFactory
      * @return the wrapped value.
      */
     public Object wrap(Context cx, Scriptable scope,
-                       Object obj, Class<?> staticType)
+                       Object obj, Class staticType)
     {
         if (obj == null || obj == Undefined.instance
             || obj instanceof Scriptable)

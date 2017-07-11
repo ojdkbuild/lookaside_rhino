@@ -36,7 +36,7 @@ public class JavaPolicySecurity extends SecurityProxy
             return super.defineClass(name, data, 0, data.length, domain);
         }
 
-        public void linkClass(Class<?> cl) {
+        public void linkClass(Class cl) {
             resolveClass(cl);
         }
     }

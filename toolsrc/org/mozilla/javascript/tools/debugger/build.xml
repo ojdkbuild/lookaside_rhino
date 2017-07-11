@@ -8,7 +8,7 @@
 
   <target name="properties">
     <property name="swing-ex-url" value="http://java.sun.com/products/jfc/tsc/articles/treetable2/downloads/src.zip"/>
-    <available file="downloaded/AbstractCellEditor.java"
+    <available file="treetable/AbstractCellEditor.java"
                property="swing-ex-available"/>
   </target>
 
@@ -16,9 +16,9 @@
     <!-- Download source from Sun's site, unzip it, remove
          the files we don't need, and change the package
     -->
-    <mkdir dir="downloaded"/>
-    <get src="${swing-ex-url}" dest="downloaded/swingExSrc.zip"/>
-    <unzip src="downloaded/swingExSrc.zip" dest="downloaded/">
+    <mkdir dir="treetable"/>
+    <get src="${swing-ex-url}" dest="treetable/swingExSrc.zip"/>
+    <unzip src="treetable/swingExSrc.zip" dest="downloaded/">
       <patternset>
           <include name="AbstractCellEditor.java"/>
           <include name="JTreeTable.java"/>
@@ -26,58 +26,58 @@
           <include name="TreeTableModelAdapter.java"/>
       </patternset>
     </unzip>
-    <replace file="downloaded/AbstractCellEditor.java">
+    <replace file="treetable/AbstractCellEditor.java">
        <replacetoken>import java.awt.Component;</replacetoken>
        <replacevalue>
-package org.mozilla.javascript.tools.debugger.downloaded;
+package org.mozilla.javascript.tools.debugger.treetable;
        </replacevalue>
     </replace>
-    <replace file="downloaded/AbstractCellEditor.java">
+    <replace file="treetable/AbstractCellEditor.java">
        <replacetoken>import java.awt.event.*;</replacetoken>
        <replacevalue></replacevalue>
     </replace>
-    <replace file="downloaded/AbstractCellEditor.java">
+    <replace file="treetable/AbstractCellEditor.java">
        <replacetoken>import java.awt.AWTEvent;</replacetoken>
        <replacevalue></replacevalue>
     </replace>
-    <replace file="downloaded/AbstractCellEditor.java">
+    <replace file="treetable/AbstractCellEditor.java">
        <replacetoken>import java.io.Serializable;</replacetoken>
        <replacevalue></replacevalue>
     </replace>
-    <replace file="downloaded/JTreeTable.java">
+    <replace file="treetable/JTreeTable.java">
        <replacetoken>import javax.swing.*;</replacetoken>
        <replacevalue>
-         package org.mozilla.javascript.tools.debugger.downloaded;
+         package org.mozilla.javascript.tools.debugger.treetable;
          import javax.swing.*;
        </replacevalue>
     </replace>
-    <replace file="downloaded/JTreeTable.java">
+    <replace file="treetable/JTreeTable.java">
        <replacetoken>class ListToTreeSelectionModelWrapper</replacetoken>
        <replacevalue>public class ListToTreeSelectionModelWrapper</replacevalue>
     </replace>
-    <replace file="downloaded/JTreeTable.java">
+    <replace file="treetable/JTreeTable.java">
        <replacetoken>ListSelectionModel getListSelectionModel</replacetoken>
        <replacevalue>public ListSelectionModel getListSelectionModel</replacevalue>
     </replace>
-    <replace file="downloaded/JTreeTable.java">
+    <replace file="treetable/JTreeTable.java">
        <replacetoken>import java.awt.Rectangle;</replacetoken>
        <replacevalue></replacevalue>
     </replace>
-    <replace file="downloaded/TreeTableModel.java">
+    <replace file="treetable/TreeTableModel.java">
        <replacetoken>import javax.swing.tree.TreeModel;</replacetoken>
        <replacevalue>
-         package org.mozilla.javascript.tools.debugger.downloaded;
+         package org.mozilla.javascript.tools.debugger.treetable;
          import javax.swing.tree.TreeModel;
        </replacevalue>
     </replace>
-    <replace file="downloaded/TreeTableModelAdapter.java">
+    <replace file="treetable/TreeTableModelAdapter.java">
        <replacetoken>import javax.swing.JTree;</replacetoken>
        <replacevalue>
-         package org.mozilla.javascript.tools.debugger.downloaded;
+         package org.mozilla.javascript.tools.debugger.treetable;
          import javax.swing.JTree;
        </replacevalue>
     </replace>
-    <delete file="downloaded/swingExSrc.zip"/>
+    <delete file="treetable/swingExSrc.zip"/>
   </target>
 
   <target name="download" depends="properties,get-swing-ex"/>
