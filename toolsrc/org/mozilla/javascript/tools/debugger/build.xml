@@ -17,7 +17,6 @@
          the files we don't need, and change the package
     -->
     <mkdir dir="treetable"/>
-    <get src="${swing-ex-url}" dest="treetable/swingExSrc.zip"/>
     <unzip src="treetable/swingExSrc.zip" dest="downloaded/">
       <patternset>
           <include name="AbstractCellEditor.java"/>

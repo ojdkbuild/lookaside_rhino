@@ -121,7 +121,6 @@
     />
 
     <mkdir dir="${xmlbeans.tmp}" />
-    <get src="${xmlbeans.url}" dest="${xmlbeans.zip}" ignoreerrors="true" />
   </target>
 
   <target name="xmlbeans-unzip" unless="xmlbeans-present?">

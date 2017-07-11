@@ -119,7 +119,6 @@
 
   <target name="retrotranslator-download" unless="retrotranslator.available">
     <mkdir dir="build/download"/>
-    <get src="http://downloads.sourceforge.net/retrotranslator/Retrotranslator-1.2.8-bin.zip" dest="build/download/Retrotranslator-1.2.8-bin.zip" usetimestamp="true"/>
     <unzip src="build/download/Retrotranslator-1.2.8-bin.zip" dest="build/download"/>
   </target>
 
