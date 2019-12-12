@@ -33,9 +33,7 @@ Requires Ant version 1.2
            excludes="org/**/jdk15/*.java"
            deprecation="on"
            debug="${debug}"
-           includeAntRuntime="false"
-           target="${target-jvm}"
-           source="${source-level}" />
+           includeAntRuntime="false" />
     <copy todir="${classes}">
       <fileset dir="src" includes="org/**/*.properties" />
       <filterset>
@@ -51,9 +49,7 @@ Requires Ant version 1.2
            includes="org/**/jdk15/*.java"
            deprecation="on"
            debug="${debug}"
-           includeAntRuntime="false"
-           target="${target-jvm}"
-           source="${source-level}" />
+           includeAntRuntime="false" />
   </target>
 
   <target name="copy-source">

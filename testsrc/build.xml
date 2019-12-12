@@ -54,8 +54,6 @@
     <antcall target="get-junit"/>
     <javac
       destdir="${test.classes}" debug="true"
-      target="${target-jvm}"
-      source="${source-level}"
     >
       <classpath>
         <pathelement path="lib/junit.jar" />
@@ -73,8 +71,6 @@
     <javac
       srcdir="testsrc"
       destdir="${test.classes}" debug="true"
-      target="${target-jvm}"
-      source="${source-level}"
     >
       <classpath>
         <pathelement path="lib/junit.jar" />

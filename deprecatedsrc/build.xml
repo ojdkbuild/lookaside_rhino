@@ -15,8 +15,6 @@
            deprecation="on"
            debug="${debug}"
            includeAntRuntime="false"
-	   target="${target-jvm}"
- 	   source="${source-level}"
 	   >
     </javac>
   </target>
